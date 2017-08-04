@@ -1,4 +1,4 @@
-package com.attilapalfi.awsdataflow.AwsDataFlow
+package com.attilapalfi.awsdataflow
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication

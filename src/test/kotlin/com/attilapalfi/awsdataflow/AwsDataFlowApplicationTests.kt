@@ -1,4 +1,4 @@
-package com.attilapalfi.awsdataflow.AwsDataFlow
+package com.attilapalfi.awsdataflow
 
 import org.junit.Test
 import org.junit.runner.RunWith
