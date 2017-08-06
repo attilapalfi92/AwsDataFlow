@@ -4,6 +4,8 @@ Resources:
   EnvVarTest:
     Type: "AWS::Lambda::Function"
     Properties:
+      Roles:
+        Ref: DataflowRole
     Code:
       S3Bucket: dataflow-bucker
       S3Key: EnvVarTest.zip
