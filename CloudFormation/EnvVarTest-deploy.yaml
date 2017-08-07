@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Resources:
+  EnvVarTest:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Runtime: python2.7
+      Handler: EnvVarTest.lambda_handler
+      CodeUri: 's3://dataflow-bucker/EnvVarTest.zip'
+      Role: 'arn:aws:iam::869422924821:role/DataflowRole'
+      MemorySize: 128
+      Timeout: 3
+      Environment:
+            Variables:
+              TEST_ENV: it should work
+      Events:
+        SNS1:
+          Type: SNS
+          Properties:
+            Topic: 'arn:aws:sns:eu-central-1:869422924821:AssetChange'
